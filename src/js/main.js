@@ -56,6 +56,11 @@ $(document).ready(function () {
   });
 
 
+  $('.accordion__link').click(function (e) {
+    e.preventDefault();
+    $(this).parent().toggleClass('open');
+    $(this).next().slideToggle();
+  });
 
 
   $(document).scroll(function () {
@@ -156,54 +161,21 @@ $(document).ready(function () {
   });
 
 
-  if($(document).width() < 992){
-    $('.service__items').slick({
+  if($(document).width() < 768){
+    $('.programs__items').slick({
       infinite: true,
-      // centerMode: true,
-      variableWidth: true,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      arrows: true,
+      dots: false,
+      slidesToShow: 1,
+
     });
 
 
-    $('.medicals__items').slick({
+    $('.circle-block__items').slick({
       infinite: true,
-      // centerMode: true,
-      variableWidth: true,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
-        }
-      ]
+      arrows: true,
+      dots: false,
+      slidesToShow: 1,
     });
 
 
