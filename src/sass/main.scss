@@ -760,6 +760,10 @@ input{
       margin: 0 auto;
       max-width: 400px;
       margin-top: 50px;
+
+      img{
+        width: 100%;
+      }
     }
 
     &--right{
@@ -767,6 +771,19 @@ input{
       margin-right: -290px;
       margin-left: 50px;
       margin-bottom: 20px;
+
+
+      @include for-992{
+        float: none;
+        display: block;
+        margin: 0 auto;
+        max-width: 400px;
+        margin-top: 50px;
+
+        img{
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -843,6 +860,10 @@ input{
     list-style: initial;
     margin-left: 20px;
     margin-top: -20px;
+
+    @include for-992{
+      margin-top: 0;
+    }
   }
 
   li{
@@ -872,10 +893,18 @@ input{
 
 .proccess{
   margin-top: 140px;
+
+  @include for-992{
+    margin-bottom: 85px;
+  }
 }
 
 .out{
   margin-top: 130px;
+
+  @include for-992{
+    margin-top: 85px;
+  }
 }
 
 .programs{
@@ -1144,6 +1173,10 @@ input{
   padding-top: 130px;
   background-repeat: no-repeat;
 
+  @include for-992{
+    padding-top: 70px;
+  }
+
   *:not(.site-btn){
     color: #202020;
   }
@@ -1154,10 +1187,19 @@ input{
 
   &__top{
     display: flex;
+
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__left{
     width: 56%;
+
+    @include for-992{
+      width: 100%;
+    }
   }
 
   &__title{
@@ -1165,15 +1207,29 @@ input{
     line-height: 36px;
     font-weight: 600;
     margin-bottom: 30px;
+
+    @include for-992{
+      text-align: center;
+      margin-bottom: 10px;
+    }
   }
 
   &__row{
     display: flex;
 
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__col{
     width: 50%;
+
+    @include for-992{
+      width: 100%;
+    }
   }
 
   &__link{
@@ -1188,8 +1244,25 @@ input{
     padding-left: 100px;
     font-size: 20px;
 
+    @include for-992{
+      padding: 0;
+      margin-top: 40px;
+    }
+
     .footer__col{
       width: 100%;
+
+      @include for-992{
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    .site-btn{
+      max-width: 200px;
+      text-align: center;
+      margin: 0 auto;
     }
   }
 
@@ -1203,6 +1276,11 @@ input{
     position: relative;
     line-height: 36px;
 
+    @include for-992{
+      padding-left: 64px;
+      align-items: center;
+    }
+
     &:before{
       content: '';
       position: absolute;
@@ -1212,6 +1290,11 @@ input{
       width: 25px;
       height: 33px;
       background: url("../img/metka.png") center center no-repeat;
+
+      @include for-992{
+        left: 20px;
+        top: 20px;
+      }
     }
   }
 
@@ -1221,6 +1304,11 @@ input{
     padding-left: 55px;
     position: relative;
     line-height: 36px;
+
+    @include for-992{
+      padding-left: 64px;
+      width: 100%;
+    }
 
     &:before{
       content: '';
@@ -1232,6 +1320,11 @@ input{
       width: 28px;
       height: 28px;
       background: url("../img/phone.png") center center no-repeat;
+
+      @include for-992{
+        left: 20px;
+        top: 35px;
+      }
     }
 
     a{
@@ -1244,6 +1337,11 @@ input{
     display: flex;
     margin-top: 90px;
 
+    @include for-992{
+      flex-direction: column;
+      align-items: center;
+    }
+
     a{
       margin-right: 20px;
 
@@ -1253,6 +1351,14 @@ input{
     }
     .footer__col{
       width: 100%;
+
+      @include for-992{
+        flex-direction: row;
+      }
+    }
+
+    .footer__title{
+      margin-bottom: 40px;
     }
 
   }
@@ -1263,4 +1369,8 @@ input{
 .copyright{
   margin-top: 60px;
   padding-bottom: 80px;
+
+  @include for-992{
+    text-align: center;
+  }
 }
