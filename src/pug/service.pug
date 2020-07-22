@@ -1,0 +1,284 @@
+extends _layout
+
+block vars
+  - var pageTitle = "Service page";
+  - var pageClass = "";
+  - var pageActive = "servicepage";
+
+block content
+  //.webp-img(data-webp="./img/Rectangle5.webp" data-img="./img/Rectangle5.jpg")
+
+    picture
+      source(srcset="./img/logo.webp" type="image/webp")
+      source(srcset="./img/logo.jpg" type="image/png")
+      img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+  div.main-wrap
+
+    .service-top.b-lazy.webp-img(data-webp="./img/top.webp"
+        data-img="./img/top.png"
+        data-webp-mobile='./img/top.webp'
+        data-img-mobile='./img/top.png')
+      .service-top__inner.site-container
+        .service-top__title Вывод из запоя <br> в Санкт-Петербурге
+        .service-top__list
+          ul
+            li Будем в течении 39 минут
+            li Доступные цены
+            li 100% анонимность
+            li Круглосуточно
+        a(href="#").service-top__btn.site-btn2 Вызвать врача
+
+
+    .text-block
+      .text-block__inner.site-container
+        .text-block__img
+          picture
+            source(srcset="./img/sec.webp" type="image/webp")
+            source(srcset="./img/sec.png" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+        h2 Частный наркологический центр «СтопНарко» в Санкт-Петербурге осуществит вывод из запоя
+        p За быстрые сроки и устранит болевые симптомы похмелья. Мероприятие проводится при длительном и бесконтрольном употреблении алкоголя на протяжении нескольких дней и больше. В зависимости от состояния пьющего, процесс отрезвления может осуществляться на дому и в стационаре центра под наблюдением опытных наркологов.
+        p Для своих пациентов мы готовы предложить грамотный и индивидуальный курс в лечении алкоголизма и наркомании, а также иных видов пагубных пристрастий. Все наши квалифицированные специалисты имеют надлежащие сертификаты, разрешения и лицензии на выполнение услуг и оказания наркологической помощи зависимым на любой стадии.
+        .text-block__warn Самостоятельные меры по устранению симптомов абстиненции или запойного состояния могут привести  к необратимым последствиям и побочным реакциям.
+        p Для своих пациентов мы готовы предложить грамотный и индивидуальный курс в лечении алкоголизма и наркомании, а также иных видов пагубных пристрастий. Все наши квалифицированные специалисты имеют надлежащие сертификаты, разрешения и лицензии на выполнение услуг и оказания наркологической помощи зависимым на любой стадии.
+        p Благодаря нашему многолетнему стажу и опыту работы, наркологический центр может гарантировать своим постояльцам полноценное выздоровление и избавление от зависимости на физическом и психологическом уровне. Мы работаем без перерывов, выходных и праздников 24 часа в сутки 7 дней в неделю.
+        p Осуществите правильное решение, обратитесь к нам прямо сейчас!.
+
+
+    .programs
+      .programs__inner.site-container
+        .programs__title.site-title2 наши программы детоксикации
+        .programs__items
+          .programs__item
+            .programs__i-title
+              span С
+              | тандартная
+            .programs__price 3500 руб
+            ul.programs__list
+              li • 400 мл Объём капельницы
+              li • Выезд доктора
+              li • Осмотр пациента
+              li • Детоксикационная терапия
+              li • Успокоительные, седативные, противорвотные + витамины
+              li • Пациенту оставляются препараты
+              li на 2-3 дня (таблетки)
+            a(href="#").programs__btn.site-btn Заказать
+          .programs__item
+            .programs__i-title
+              span У
+              | силенная
+            .programs__price 5000 руб
+            ul.programs__list
+              li • 400-600 мл Объём капельницы
+              li • Выезд доктора, осмотр пациента
+              li • Детоксикационная терапия, успокоительные, седативные, противорвотные + витамины
+              li • Пациенту оставляются препараты
+              li на 2-3 дня (таблетки)
+              li • В капельницу включено большее количество препаратов
+            a(href="#").programs__btn.site-btn Заказать
+          .programs__item
+            .programs__i-title
+              span Д
+              | войная
+            .programs__price 5500 руб
+            ul.programs__list
+              li • 800-900 мл Объём капельницы
+              li • Выезд доктора
+              li • Осмотр пациента
+              li • Детоксикационная терапия
+              li • Успокоительные, седативные, противорвотные +витамины
+              li • Пациенту оставляются препараты
+              li на 2-3 дня (таблетки)
+              li • В капельницу включено большее количество препаратов
+              li • Снятие и описание ЭКГ
+              li • Комплекс препаратов, которые снижают
+              li токсический вред алкоголя
+              li • Гепатропротекторы
+            a(href="#").programs__btn.site-btn Заказать
+          .programs__item
+            .programs__i-title
+              span И
+              | нтенсивная
+            .programs__price 7000 руб
+            ul.programs__list
+              li • 900-1200 мл Объём капельницы
+              li • Выезд доктора, осмотр пациента
+              li • Детоксикационная терапия
+              li • Успокоительные, седативные, противорвотные +витамины
+              li • Пациенту оставляются препараты
+              li на 2-3 дня (таблетки)
+              li • В капельницу включено большее количество препаратов
+              li • Снятие и описание ЭКГ
+              li • Комплекс препаратов, которые снижают
+              li токсический вред алкоголя
+              li • Гепатропротекторы
+              li • Препараты улучшающие мозговую деятельность
+            a(href="#").programs__btn.site-btn Заказать
+
+    .circle-block.how-out
+      .circle-block__inner.site-container
+        .circle-block__title.site-title2 как выйти из запоя?
+        .circle-block__items
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/1.webp" type="image/webp")
+                source(srcset="./img/1.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Позвоните нам
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/2.webp" type="image/webp")
+                source(srcset="./img/2.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Врач выезжает <br> немедленно
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/3.webp" type="image/webp")
+                source(srcset="./img/3.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Капельница снимает <br> боль и симптомы
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/4.webp" type="image/webp")
+                source(srcset="./img/4.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Сон восстановит <br> организм
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/5.webp" type="image/webp")
+                source(srcset="./img/5.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Вернется <br> трудоспособность
+
+
+    .wawe-block.b-lazy.webp-img(data-webp="./img/five.webp"
+      data-img="./img/five.png"
+      data-webp-mobile='./img/five.webp'
+      data-img-mobile='./img/five.png')
+      .wawe-block__inner.site-container
+        .wawe-block__title.site-title2 нужна помощь в выходе из запоя?
+        .wawe-block__subtitle ОБРАЩАЙТЕСЬ К НАМ, СПЕЦИАЛИСТ ПРОВЕДЕТ ПРОЦЕДУРУ АНОНИМНО
+        .wawe-block__form
+          form
+            input(type="text" placeholder="Ваше имя")
+            input(type="text" placeholder="Ваш телефон")
+            a(href="#").site-btn3 Отправить
+          .wawe-block__caption *Ваши даные останутся конфиденциальными
+
+
+    .text-block
+      .text-block__inner.site-container
+        .text-block__img.text-block__img--right
+          picture
+            source(srcset="./img/six.webp" type="image/webp")
+            source(srcset="./img/six.png" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+        h2 Процесс проведения услуги детоксикации
+        p Вывод из патологического положения – услуга наркологического центра «СтопНарко» в Санкт-Петербурге, что осуществляется при помощи внутривенной капельницы с использованием специальных растворов и добавлением лекарственных препаратов. Перед установкой, алкоголик проходит детальное обследование, а также врач опрашивает его родственников, что поможет узнать о наличии патологий в здоровье.
+        p При выезде на дом к пациенту наши врачи наркологи оснащены:
+          ul
+            li Аппарат ЭКГ
+            li Глюкометр
+            li Забор крови
+            li Кардиомонитор
+            li Необходимые лекарства
+            li Анализы.
+        p <a href="#">Анонимный вывод из запоя в Санкт-Петербурге</a> предлагает осуществить клиника лечения алкоголизма и наркомании «СтопНарко». Поэтому доверьте здоровье ваших близких, страдающих алкоголизмом, опытной бригаде мед работников, которые оперативно выедут на дом к пьющему человеку.
+        p Оформление услуги вывода из запоя в центре наркологии «СтопНарко» в Санкт-Петербурге доступно для каждого. Достаточно лишь позвонить по круглосуточному телефону, и специалист незамедлительно выедет по указанному адресу. Также каждый зависимый имеет возможность получить бесплатную консультацию и ознакомиться заранее с действиями специалиста в клинике и домашних условиях.
+        p Обращайтесь и мы совместно устроим больному жизнь без алкоголя. Подарите шанс на счастливое будущее вашим родным и близким.
+
+
+
+    .text-block
+      .text-block__inner.site-container
+        .text-block__img
+          picture
+            source(srcset="./img/sec.webp" type="image/webp")
+            source(srcset="./img/sec.png" type="image/png")
+            img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+
+        h2 Как происходит процедура Вывод из запоя на дому?
+        ol
+          li Вы звоните в клинику «СтопНарко» и сообщаете оператору о своей проблеме с алкоголем. Отвечаете на несколько несложных вопросов. Все ответы будут переданы лечащему врачу. Врач приедет по указанному адресу в сжатые сроки.
+          li После прибытия на дом врач оценивает Ваше состояние, проводит обследование, общается с Вами или родными, определяет тактику лечения.
+          li Врач очищает организм от токсинов посредством проверенных препаратов, используя капельницу с лекарствами (инфузионная терапия). В каждом отдельном случае используются разные медицинские препараты и их пропорции. Учитываются: длительность запоя, степень опьянения, возраст, перенесенные заболевания.
+          li Во время вывода из запоя на дому проводится беседа с зависимым и родственниками. Врачом даются подробные рекомендации по дальнейшему лечению. При необходимости предлагаются возможные варианты кодирования.
+          li По окончанию инфузионной терапии врач оценивает текущее состояние пациента, расписывает курс медикаментозной терапии, оставляет таблетки на 3-5 дней.
+          li Врач заполняет медицинскую документацию: амбулаторную карту, справку о прохождении лечения, памятку о кодировании, а также выписывает чек.
+
+        p Для своих пациентов мы готовы предложить грамотный и индивидуальный курс в лечении алкоголизма и наркомании, а также иных видов пагубных пристрастий. Все наши квалифицированные специалисты имеют надлежащие сертификаты, разрешения и лицензии на выполнение услуг и оказания наркологической помощи зависимым на любой стадии.
+        p Благодаря нашему многолетнему стажу и опыту работы, наркологический центр может гарантировать своим постояльцам полноценное выздоровление и избавление от зависимости на физическом и психологическом уровне. Мы работаем без перерывов, выходных и праздников 24 часа в сутки 7 дней в неделю.
+
+
+    .circle-block.offers
+      .circle-block__inner.site-container
+        .circle-block__title.site-title2
+        .circle-block__items
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/w1.webp" type="image/webp")
+                source(srcset="./img/w1.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name  Эффективные и безопасные  методики
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/w2.webp" type="image/webp")
+                source(srcset="./img/w2.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Выезд к пациентам  в течении 39 минут
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/w3.webp" type="image/webp")
+                source(srcset="./img/w3.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Анонимность -  не разглашаем информацию
+          .circle-block__item
+            .circle-block__img
+              picture
+                source(srcset="./img/w4.webp" type="image/webp")
+                source(srcset="./img/w4.png" type="image/png")
+                img(src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="img")
+            .circle-block__name Дежурные врачи в городе и области
+
+    .accordion
+      .accordion__inner.site-container
+        .accordion__title.site-title2
+        .accordion__items
+          .accordion__item
+            a(href="#").accordion__link <span>+</span> Состав капельниц при детоксикации
+            .accordion__content
+              p Состав капельниц при детоксикации
+          .accordion__item
+            a(href="#").accordion__link <span>+</span> Противопоказания к проведению детоксикации
+            .accordion__content
+              p Противопоказания к проведению детоксикации
+          .accordion__item
+            a(href="#").accordion__link <span>+</span>  Показания к вызову нарколога на дом
+            .accordion__content
+              p Показания к вызову нарколога на дом
+          .accordion__item
+            a(href="#").accordion__link <span>+</span> Действия пациента после капельницы
+            .accordion__content
+              p Действия пациента после капельницы
+
+
+    .wawe-block
+      .wawe-block__inner.site-container
+        .wawe-block__title.site-title2 ОСТаВЬТЕ ЗАЯВКУ
+        .wawe-block__subtitle И ПОЛУЧИТЕ ПЕРВИЧНУЮ КОНСУЛЬТАЦИЮ БЕСПЛАТНО
+        .wawe-block__form
+          form
+            input(type="text" placeholder="Ваше имя")
+            input(type="text" placeholder="Ваш телефон")
+            a(href="#").site-btn3 Отправить
+          .wawe-block__caption *Ваши даные останутся конфиденциальными
