@@ -1084,6 +1084,18 @@ input{
       }
     }
   }
+
+  &--aic &__img{
+    @include from-992{
+      margin-bottom: 100px;
+    }
+  }
+
+  &--aic h2{
+    @include from-992{
+      padding-top: 175px;
+    }
+  }
 }
 
 .proccess{
@@ -1717,11 +1729,17 @@ input{
 
 .our-services{
 
+
   &__inner{
     padding-bottom: 80px;
 
+    @media (max-width: 500px){
+      background: url('../img/off-mob.webp') center 65px no-repeat;
+    }
+
     @include for-992{
       padding-bottom: 50px;
+      padding-top: 70px;
     }
   }
 
@@ -1927,6 +1945,15 @@ input{
   &__inner{
     padding-top: 164px;
     padding-bottom: 80px;
+
+    @media (max-width: 500px){
+      background: url('../img/doctors-mobile-bg.webp') center 65px no-repeat;
+    }
+
+    @include for-992{
+      padding-top: 65px;
+      padding-bottom: 65px;
+    }
   }
 
   &__title{
@@ -2001,8 +2028,28 @@ input{
 
 .clinic-services{
 
+
+  @media (max-width: 500px ){
+    background: url("../img/service-bg-mobile.webp") center/contain no-repeat;
+  }
+
+  .programs__item{
+
+    @include for-992{
+      margin-bottom: 0;
+      padding-bottom: 30px;
+    }
+  }
+
   .programs__i-title{
     text-align: center;
+
+    @include for-992{
+
+      br{
+        display: none;
+      }
+    }
   }
 
   .programs__txt{
@@ -2017,6 +2064,15 @@ input{
   padding-top: 80px;
   padding-bottom: 100px;
 
+  @include for-992{
+    padding-top: 0;
+    padding-bottom: 20px;
+  }
+
+ @media (max-width: 500px ){
+   background: url("../img/table-mobile-bg.webp") center/contain no-repeat;
+ }
+
   &__inner{
 
   }
@@ -2027,6 +2083,14 @@ input{
 
   &__tables{
     margin-top: 70px;
+    max-width: 1025px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include for-992{
+      margin-top: 50px;
+    }
   }
 
   &__table{
@@ -2043,6 +2107,11 @@ input{
     }
   }
 
+  &__head &__row{
+    &:hover{
+      background-color: transparent;
+    }
+  }
   &__head &__col{
     font-weight: 600;
     color: #202020;
@@ -2121,7 +2190,7 @@ input{
     padding-right: 45px;
 
     @include for-768{
-      max-width: 275px;
+      max-width: 330px;
       font-size: 18px;
     }
   }
@@ -2131,6 +2200,13 @@ input{
   height: 1122px;
   background-position: right top;
   background-repeat: no-repeat;
+
+  @include for-992{
+    height: 700px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 
