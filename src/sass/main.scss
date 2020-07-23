@@ -1058,6 +1058,18 @@ input{
       }
     }
   }
+
+  &--aic &__img{
+    @include from-992{
+      margin-bottom: 100px;
+    }
+  }
+
+  &--aic h2{
+    @include from-992{
+      padding-top: 175px;
+    }
+  }
 }
 
 .proccess{
@@ -1998,6 +2010,10 @@ input{
 
   &__tables{
     margin-top: 70px;
+    max-width: 1025px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__table{
@@ -2014,6 +2030,11 @@ input{
     }
   }
 
+  &__head &__row{
+    &:hover{
+      background-color: transparent;
+    }
+  }
   &__head &__col{
     font-weight: 600;
     color: #202020;
