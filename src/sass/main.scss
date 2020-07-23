@@ -156,7 +156,11 @@ input{
   text-align: center;
 
   @include for-992{
+    font-size: 36px;
+  }
 
+  @include for-420{
+    font-size: 30px;
   }
 }
 
@@ -234,6 +238,11 @@ input{
   &:hover{
     background: #448beb;
   }
+
+  @include for-992{
+    font-size: 20px;
+    padding: 15px 60px;
+  }
 }
 
 .site-btn3{
@@ -245,14 +254,25 @@ input{
   padding-bottom: 21px;
   display: inline-block;
   text-align: center;
+
+  @include for-992{
+    font-size: 20px;
+  }
 }
 
 
 .bg-block{
 
+  &-2{
+    background-repeat: no-repeat;
+    background-position: center 290px;
+  }
+
   &-3{
     background-repeat: no-repeat;
     background-position: center 10px;
+
+
   }
 }
 
@@ -262,6 +282,12 @@ input{
   left: 0;
   z-index: 1;
   width: 100%;
+
+  @include for-992{
+    padding-bottom: 14px;
+    background: white;
+    position: fixed;
+  }
 
   &__inner{
 
@@ -280,7 +306,20 @@ input{
   }
 
   &__logo{
+    position: relative;
+    z-index: 2;
 
+    @include for-768{
+      img{
+        max-width: 170px;
+      }
+    }
+
+    @include for-420{
+      img {
+        max-width: 135px;
+      }
+    }
   }
 
   &__menu{
@@ -294,12 +333,26 @@ input{
       top: 0;
       transform: translateX(100%);
       flex-direction: column;
-      align-items: center;
-      padding-top: 100px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-top: 75px;
       margin-top: 0;
       height: 100vh;
       background: white;
       opacity: 0;
+      z-index: 10;
+      padding-left: 30px;
+
+      &:after{
+        content: 'Меню';
+        position: absolute;
+        top: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: uppercase;
+        font-size: 18px;
+        font-weight: 600;
+      }
 
       &.open{
         transform: translateX(0);
@@ -312,13 +365,13 @@ input{
   }
 
   &__menu-item{
-    //padding: 0 15px;
     position: relative;
 
     @include for-992{
       margin-bottom: 15px;
-      width: 100%;
-      text-align: center;
+      width: auto;
+      display: flex;
+      flex-wrap: wrap;
     }
 
     @include from-992{
@@ -349,7 +402,9 @@ input{
     color: #1a1e7c;
 
     @include for-992{
-      font-size: 18px;
+      font-size: 24px;
+      color: #000000;
+      order: 0;
     }
 
     &:before{
@@ -375,26 +430,35 @@ input{
   &__submenu{
     position: absolute;
     display: none;
-    background: white;
+    background: #fff;
     top: 100%;
-    margin-top: 20px;
-    left: 15px;
-    width: 200px;
-    padding: 0 10px 0 20px;
+    margin-top: 0;
+    left: 0;
+    width: 345px;
+    padding: 25px 0 60px 40px;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.21);
+    border-radius: 25px;
 
     @include for-992{
       position: static;
       width: 100%;
+      padding: 0;
+      box-shadow: none;
+      order: 2;
     }
 
     *{
       line-height: 18px;
     }
+
+    li{
+      padding-right: 40px;
+    }
   }
 
   &__submenu-item{
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &:last-child{
       border: 0;
@@ -409,6 +473,8 @@ input{
     }
 
     @include for-992{
+      margin-top: 10px;
+
       &.open .header__submenu2{
 
       }
@@ -418,7 +484,7 @@ input{
 
   &__submenu-link-style{
     font-weight: 300;
-    font-size: 11px;
+    font-size: 18px;
     line-height: 18px;
 
     @include for-992{
@@ -429,28 +495,38 @@ input{
 
   &__submenu-link{
     position: relative;
+
+    @include for-992{
+      font-weight: 500;
+      font-size: 20px;
+    }
   }
 
   &__submenu2{
     position: absolute;
     display: none;
-    background: white;
+    background: #fff;
     left: 100%;
+    margin-left: 0;
     top: 0;
-    width: 200px;
-    padding: 0 12px 0 17px;
+    width: 345px;
+    padding: 25px 40px 60px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.21);
+    margin-top: -25px;
 
     @include for-992{
       position: static;
       width: 100%;
       margin-top: 10px;
       padding: 0;
+      box-shadow: none;
     }
   }
 
   &__submenu2-item{
     position: relative;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    //border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 
     &:last-child{
       border: 0;
@@ -461,6 +537,13 @@ input{
         .header__submenu3{
           display: block;
         }
+      }
+    }
+
+    .header__submenu-link{
+      @include for-992{
+        font-size: 18px;
+        font-weight: 300;
       }
     }
   }
@@ -512,6 +595,31 @@ input{
     font-size: 22px;
     margin-right: 20px;
     margin-left: auto;
+
+    @include for-768{
+      font-size: 20px;
+    }
+
+    @include for-420{
+      font-size: 14px;
+      margin-right: 10px;
+    }
+
+    a{
+      &:first-child{
+        margin-right: 20px;
+
+        @include for-768{
+          margin-right: 0;
+        }
+      }
+
+      &:last-child{
+        @include for-768{
+          display: none;
+        }
+      }
+    }
   }
 
   &__menu-btn{
@@ -520,13 +628,13 @@ input{
     }
 
     position: relative;
-    z-index: 1;
+    z-index: 11;
     width: 24px;
     height: 24px;
     background: url("../img/burger.svg") center center no-repeat;
 
     &.open{
-      background: url("../img/icon/Vector.svg") center center no-repeat;
+      background: url("../img/close-menu.png") center center no-repeat;
     }
   }
 
@@ -534,41 +642,60 @@ input{
 
 .has-submenu{
 
+  @include for-992{
+    display: flex;
+    flex-wrap: wrap;
+
+    .header__submenu-link{
+      order: 0;
+    }
+    //&:after{
+    //  order: 1;
+    //  position: relative !important;
+    //}
+    .header__submenu2{
+      order: 2;
+    }
+  }
+
   &.header__submenu-item{
 
   }
 
 
   &:after{
-    content: '';
+    content: '>';
     display: block;
-    width: 5px;
-    height: 5px;
     position: absolute;
-    top: 17px;
-    right: 10px;
-    background: #FFC700;
-    border-radius: 50%;
+    top: 10px;
+    right: 15px;
   }
 
   @include for-992{
+    padding: 0;
+    box-shadow: none;
+
+    &.open > .header__submenu-link{
+      color: #448beb;
+    }
 
     &:after{
       content: '';
       display: block;
-      width: 12px;
-      height: 8px;
-      background: url("../img/icon/Arrow-b.svg") center center no-repeat;
-      position: absolute;
-      right: 50%;
-      margin-right: -116px;
-      top: 20px;
+      width: 15px;
+      height: 10px;
+      background: url(../img/arr.png) center center no-repeat;
+      position: relative;
+      right: -10px;
+      margin-right: -25px;
+      top: 10px;
       transform: translateY(-50%);
+      order: 1;
     }
 
     &.open:after{
       transform:rotate(-180deg);
-      top: 17px !important;
+      top: 6px !important;
     }
   }
 
@@ -588,53 +715,59 @@ input{
       right: -20px;
       opacity: 1;
       transition: 0.3s;
+
+      @include for-992{
+        display: none;
+      }
     }
   }
 
   li{
-    padding: 9px 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
 
     a{
       display: inline-block;
     }
 
-    @include from-992{
-      &:before{
-        content: '';
-        display: block;
-        position: absolute;
-        height: calc(100% + 1px);
-        left: -20px;
-        width: 2px;
-        top: 0;
-        background: #FFC700;
-        opacity: 0;
-        transition: 0.3s;
-      }
-
-      &:hover{
-        &:before{
-          opacity: 1;
-        }
-      }
-    }
-
-
-    li:before{
-      display: none;
-    }
+    //@include from-992{
+    //  &:before{
+    //    content: '';
+    //    display: block;
+    //    position: absolute;
+    //    height: calc(100% + 1px);
+    //    left: -20px;
+    //    width: 2px;
+    //    top: 0;
+    //    background: #FFC700;
+    //    opacity: 0;
+    //    transition: 0.3s;
+    //  }
+    //
+    //  &:hover{
+    //    &:before{
+    //      opacity: 1;
+    //    }
+    //  }
+    //}
+    //
+    //
+    //li:before{
+    //  display: none;
+    //}
 
     @include for-992{
       border: 0;
       padding: 10px 0;
+
     }
   }
   li:first-child{
     padding-top: 12px;
 
-    &:after{
-      top: 20px;
-    }
+    //&:after{
+    //  top: 20px;
+    //}
 
     @include for-992{
       border: 0;
@@ -654,22 +787,28 @@ input{
 
 
   @include for-992{
+
+    &.open .header__menu-link{
+      color: #1a1e7c;
+    }
+
     &:after{
       content: '';
       display: block;
-      width: 12px;
-      height: 8px;
-      background: url("../img/icon/Arrow-b.svg") center center no-repeat;
-      position: absolute;
-      right: 50%;
-      margin-right: -120px;
-      top: 10px;
+      width: 15px;
+      height: 10px;
+      background: url(../img/arr.png) center center no-repeat;
+      position: relative;
+      right: -10px;
+      margin-right: -25px;
+      top: 15px;
       transform: translateY(-50%);
+      order: 1;
     }
 
     &.open:after{
       transform:rotate(-180deg);
-      top: 7px;
+      top: 10px;
     }
   }
 
@@ -692,7 +831,8 @@ input{
   }
 
   @include for-550{
-    padding-top: 60px;
+    margin-top: 70px;
+    padding-top: 50px;
   }
 
   &__title{
@@ -752,7 +892,7 @@ input{
   &__img{
     float: left;
     margin-left: -290px;
-    margin-right: 65px;
+    margin-right: 60px;
 
     @include for-992{
       float: none;
@@ -838,6 +978,11 @@ input{
       line-height: 36px;
       text-align: center;
     }
+
+    @include for-420{
+      font-size: 21px;
+      line-height: 28px;
+    }
   }
 
   p{
@@ -877,11 +1022,35 @@ input{
 
   ol{
     margin-bottom: 25px;
+    list-style: none;
+    display: grid;
+    padding-left: 18px;
+
+    @include for-992{
+      padding-left: 20px;
+    }
+
     li{
       font-size: 18px;
       line-height: 30px;
       text-align: justify;
       margin-bottom: 25px;
+      counter-increment: step-counter;
+      position: relative;
+
+      &:before {
+        content: counter(step-counter);
+        position: absolute;
+        top: -3px;
+        left: -16px;
+        display: inline-block;
+        width: 16px;
+        height: 15px;
+        margin-right: 15px;
+        color: #111ba4;
+        font-size: 18px;
+        font-weight: 600;
+      }
 
       @include for-992{
         font-size: 16px;
@@ -896,6 +1065,7 @@ input{
 
   @include for-992{
     margin-bottom: 85px;
+    margin-top: 70px;
   }
 }
 
@@ -910,6 +1080,10 @@ input{
 .programs{
   padding-top: 100px;
 
+  @include for-992{
+    padding-top: 60px;
+  }
+
   &__inner{
 
   }
@@ -919,6 +1093,10 @@ input{
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px;
+
+    @include for-420{
+      margin-top: 0;
+    }
   }
 
   &__item{
@@ -975,14 +1153,18 @@ input{
   &__list{
     max-width: 345px;
     font-size: 20px;
+    line-height: 36px;
 
     @include for-768{
       margin: 0 auto;
       text-align: left;
+      max-width: 285px;
+      font-size: 16px;
+      line-height: 24px;
     }
 
     li{
-      margin-bottom: 15px;
+      margin-bottom: 8px;
     }
   }
 
@@ -998,6 +1180,10 @@ input{
 .circle-block{
   padding-bottom: 135px;
 
+  @include for-992{
+    padding-bottom: 90px;
+  }
+
   &__items{
     display: flex;
     justify-content: space-between;
@@ -1006,6 +1192,7 @@ input{
 
     @include for-768{
       flex-direction: column;
+      margin-top: 45px;
     }
   }
 
@@ -1029,6 +1216,12 @@ input{
   height: 627px;
   background-position: top center;
   clear: both;
+
+  @include for-768{
+    height: 550px;
+    background-position: top center;
+    background-size: cover;
+  }
 
   &__inner{
     padding-top: 170px;
@@ -1086,10 +1279,13 @@ input{
       }
 
       @include for-992{
-        padding-top: 6px;
+        padding-top: 10px;
         padding-bottom: 11px;
         margin-right: 0;
         margin-bottom: 15px;
+        text-align: center;
+        padding-left: 0;
+        font-size: 18px;
       }
 
       &::placeholder{
@@ -1098,8 +1294,11 @@ input{
     }
 
     .site-btn3{
-      padding-top: 10px;
-      padding-bottom: 15px;
+      @include for-768{
+        padding-top: 12px;
+        padding-bottom: 13px;
+      }
+
     }
   }
 
@@ -1116,11 +1315,23 @@ input{
 
 .offers{
   padding-top: 100px;
+
+  @include for-768{
+    background: url(../img/off-mob.webp) center 65px no-repeat;
+  }
+
+  @include for-420{
+    padding-top: 30px;
+  }
 }
 
 
 .accordion{
   margin-bottom: 130px;
+
+  @include for-992{
+    margin-bottom: 80px;
+  }
 
   &__inner{
 
@@ -1140,6 +1351,10 @@ input{
     padding: 25px 25px 20px;
     margin-bottom: 30px;
 
+    @include for-992{
+      margin-bottom: 25px;
+    }
+
     &.open{
       .accordion__link span{
         position: relative;
@@ -1151,6 +1366,11 @@ input{
   &__link{
     font-size: 22px;
     font-weight: 600;
+
+    @include for-992{
+      color: #303030;
+      font-weight: 500;
+    }
 
     span{
       display: inline-block;
@@ -1173,6 +1393,7 @@ input{
 .footer{
   padding-top: 130px;
   background-repeat: no-repeat;
+  background-position: top center;
 
   @include for-992{
     padding-top: 70px;
@@ -1231,6 +1452,19 @@ input{
     @include for-992{
       width: 100%;
     }
+
+    svg{
+      path{
+        transition: 0.3s;
+      }
+
+      &:hover{
+
+        path{
+          fill: #161b7a;
+        }
+      }
+    }
   }
 
   &__link{
@@ -1238,6 +1472,11 @@ input{
     font-weight: 300;
     display: block;
     line-height: 36px;
+
+    &:hover{
+      color: #3e7ede;
+      text-decoration: underline;
+    }
   }
 
   &__right{
@@ -1248,6 +1487,8 @@ input{
     @include for-992{
       padding: 0;
       margin-top: 40px;
+      width: 100%;
+      max-width: 280px;
     }
 
     .footer__col{
@@ -1365,6 +1606,34 @@ input{
   }
 
 
+}
+
+.slick-prev,
+.slick-next{
+  position: absolute;
+  font-size: 0;
+  left: 0;
+  top: 50%;
+  width: 25px;
+  height: 55px;
+  background: url("../img/slide-arr.svg") center center no-repeat;
+  background-size: contain;
+  border: 0;
+  z-index: 10;
+
+  @include for-420{
+    left: -10px;
+  }
+}
+
+.slick-next{
+  left: auto;
+  right: 0;
+  transform: rotate(-180deg);
+
+  @include for-420{
+    right: -10px;
+  }
 }
 
 .copyright{

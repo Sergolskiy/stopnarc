@@ -207,7 +207,7 @@ $(document).ready(function () {
       arrows: true,
       dots: false,
       slidesToShow: 1,
-
+      adaptiveHeight: true,
     });
 
 
