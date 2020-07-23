@@ -1028,6 +1028,7 @@ input{
 .wawe-block{
   height: 627px;
   background-position: top center;
+  clear: both;
 
   &__inner{
     padding-top: 170px;
@@ -1373,4 +1374,463 @@ input{
   @include for-992{
     text-align: center;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.our-services{
+
+  &__inner{
+    padding-bottom: 80px;
+
+    @include for-992{
+      padding-bottom: 50px;
+    }
+  }
+
+  &__title{
+
+  }
+
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    margin-top: 50px;
+  }
+
+  &__item{
+    padding: 0 15px;
+    width: 25%;
+    border-radius: 25px;
+    transition: .3s;
+
+    @include for-992{
+      width: 100%;
+    }
+
+    @include from-992 {
+      &:hover {
+        box-shadow: 0 11px 21px 0 #c9c8c8d9;
+      }
+    }
+  }
+
+  &__item-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  &__img{
+    margin-bottom: 45px;
+  }
+
+  &__name{
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__price{
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+
+.advantages{
+
+  &__inner{
+    padding-top: 80px;
+    padding-bottom: 125px;
+
+    @include for-992{
+      padding-top: 45px;
+      padding-bottom: 80px;
+    }
+  }
+
+  &__title{
+
+  }
+
+  &__content{
+    padding-top: 80px;
+
+    @include for-1200{
+      padding-top: 40px;
+    }
+  }
+
+  &__list{
+    position: relative;
+
+    @include for-1200{
+      transform: scale(.7);
+    }
+
+    @include for-992{
+      transform: scale(1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item{
+    font-size: 30px;
+    line-height: 36px;
+    display: inline-flex;
+
+    @include from-992{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: fit-content;
+      display: flex;
+    }
+
+    @include for-992{
+      position: relative;
+      font-size: 24px;
+      line-height: 30px;
+      margin-bottom: 25px;
+      text-align: center;
+      width: fit-content;
+      max-width: 410px;
+      padding-left: 25px;
+      justify-content: center;
+
+      img{
+        width: 17px;
+        height: 13px;
+        position: absolute;
+        left: 0;
+        top: 8px;
+      }
+
+      br{
+        display: none;
+      }
+    }
+
+    &:before{
+      content: '';
+      background: url("../img/001-check.svg") center/contain no-repeat;
+      width: 17px;
+      height: 13px;
+      display: inline-flex;
+      position: absolute;
+      left: -25px;
+      top: 11px;
+
+      @include for-992{
+        display: none;
+      }
+    }
+
+    @include from-992{
+
+      &--1{
+        margin-left: -345px;
+        margin-top: -210px;
+      }
+      &--2{
+        margin-left: -479px;
+        margin-top: -21px;
+      }
+      &--3{
+        margin-left: -385px;
+        margin-top: 202px;
+      }
+      &--4{
+        margin-left: 420px;
+        margin-top: -235px;
+        text-align: end;
+        width: max-content;
+      }
+      &--5{
+        margin-left: 479px;
+        margin-top: 10px;
+        text-align: end;
+      }
+      &--6{
+        margin-left: 385px;
+        margin-top: 202px;
+        text-align: end;
+
+        &:before{
+          left: 115px;
+        }
+      }
+
+    }
+  }
+
+  &__img{
+    display: flex;
+    justify-content: center;
+
+    img {
+
+      @include for-992 {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.doctors{
+
+  &__inner{
+    padding-top: 164px;
+    padding-bottom: 80px;
+  }
+
+  &__title{
+
+  }
+
+  &__content{
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+  }
+
+  &__item{
+    width: 25%;
+    padding: 0 15px;
+    border-radius: 25px;
+    transition: .3s;
+
+    @include for-992{
+      width: 100%;
+    }
+
+    @include from-992 {
+      &:hover {
+        box-shadow: 0 11px 21px 0 #c9c8c8d9;
+      }
+    }
+  }
+
+  &__item-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 45px;
+  }
+
+  &__img{
+    margin-bottom: 40px;
+  }
+
+  &__name{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 15px;
+
+    span{
+      font-size: 22px;
+    }
+  }
+
+  &__exp{
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: 300;
+  }
+
+  &__btn{
+
+  }
+
+  &__btn-i{
+
+  }
+
+}
+
+.clinic-services{
+
+  .programs__i-title{
+    text-align: center;
+  }
+
+  .programs__txt{
+    max-width: 505px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 36px;
+  }
+}
+
+.service-price{
+  padding-top: 80px;
+  padding-bottom: 100px;
+
+  &__inner{
+
+  }
+
+  &__title{
+
+  }
+
+  &__tables{
+    margin-top: 70px;
+  }
+
+  &__table{
+    margin-bottom: 80px;
+
+    @include for-992{
+      margin-top: 0;
+    }
+  }
+
+  &__head{
+    @include for-992{
+      display: none;
+    }
+  }
+
+  &__head &__col{
+    font-weight: 600;
+    color: #202020;
+    font-size: 24px;
+    line-height: 60px;
+  }
+
+  &__mobile-title{
+    color: #1a1a1a;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 25px;
+
+    @include from-992{
+      display: none;
+    }
+  }
+
+  &__row{
+    display: flex;
+    transition: .3s;
+    border-radius: 5px;
+
+    @include for-992{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    &:hover{
+      background-color: #d9e8fb;
+    }
+  }
+
+  &__col{
+    width: 100%;
+    line-height: 42px;
+    padding: 0 30px;
+    color: #333333;
+    font-size: 20px;
+    font-weight: 300;
+
+    @include for-992{
+      text-align: center;
+      width: 100%;
+      line-height: 24px;
+      font-size: 18px;
+    }
+
+    &:last-child{
+      width: fit-content;
+      white-space: nowrap;
+      text-align: end;
+
+      @include for-992{
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__body{
+
+  }
+
+  &__btn{
+    display: flex;
+    justify-content: center;
+  }
+
+  &__btn-i{
+    text-align: center;
+    padding-left: 45px;
+    padding-right: 45px;
+
+    @include for-768{
+      max-width: 275px;
+      font-size: 18px;
+    }
+  }
+}
+
+.home-top{
+  height: 1122px;
+  background-position: right top;
+  background-repeat: no-repeat;
 }

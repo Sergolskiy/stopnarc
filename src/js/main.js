@@ -161,6 +161,46 @@ $(document).ready(function () {
   });
 
 
+  if($(document).width() < 992) {
+    $('.our-services-slider-js').slick({
+      infinite: true,
+      arrows: true,
+      dots: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
+    });
+
+    $('.doctors-slider-js').slick({
+      infinite: true,
+      arrows: true,
+      dots: false,
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1
+          }
+        }]
+    });
+
+    $('.service-price__tables').slick({
+      infinite: true,
+      arrows: true,
+      dots: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      adaptiveHeight: true,
+    });
+  }
   if($(document).width() < 768){
     $('.programs__items').slick({
       infinite: true,

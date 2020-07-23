@@ -34,7 +34,7 @@ block content
     .our-services
       .our-services__inner.site-container
         .our-services__title.site-title2  НАШИ УСЛУГИ
-        .our-services__content
+        .our-services__content.our-services-slider-js
           .our-services__item
             .our-services__item-content
               .our-services__img
@@ -101,20 +101,32 @@ block content
               .our-services__price От 3500 руб
 
     .advantages
-      .advantages__inner
-        .advantages__title.site-title2
+      .advantages__inner.site-container
+        .advantages__title.site-title2 ПРЕИМУЩЕСТВА
         .advantages__content
-          .advantages__img
-            picture
-              source(srcset="./img/advantages-img.webp" type="image/webp")
-              img(src="./img/advantages-img" alt="img")
           .advantages__list
-            .advantages__item Круглосуточное <br> дежурство врачей
-            .advantages__item Медицинская <br> лицензия
-            .advantages__item Опытный и <br> квалифицированный <br> персонал
-            .advantages__item Удобное <br> месторасположение
-            .advantages__item Гибкая ценовая <br> политика
-            .advantages__item Широкий выбор <br> способов и методов <br> лечения
+            .advantages__item.advantages__item--1
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Широкий выбор <br> способов и методов <br> лечения
+            .advantages__item.advantages__item--2
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Гибкая ценовая <br> политика
+            .advantages__item.advantages__item--3
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Удобное <br> месторасположение
+            .advantages__img
+              picture
+                source(srcset="./img/advantages-img.webp" type="image/webp")
+                img(src="./img/advantages-img" alt="img")
+            .advantages__item.advantages__item--4
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Круглосуточное <br> дежурство врачей
+            .advantages__item.advantages__item--5
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Медицинская <br> лицензия
+            .advantages__item.advantages__item--6
+              img(src="./img/001-check.svg" alt="ico").tablet
+              | Опытный и <br> квалифицированный <br> персонал
 
     .wawe-block.b-lazy.webp-img(data-webp="./img/five.webp"
     data-img="./img/five.png"
@@ -133,7 +145,7 @@ block content
     .doctors
       .doctors__inner.site-container
         .doctors__title.site-title2  НАШИ ВРАЧИ
-        .doctors__content
+        .doctors__content.doctors-slider-js
           .doctors__item
             .doctors__item-content
               .doctors__img
@@ -171,8 +183,8 @@ block content
             .doctors__item-content
               .doctors__img
                 picture
-                  source(srcset="./img/d3.webp" type="image/webp")
-                  img(src="./img/d3.png" alt="img")
+                  source(srcset="./img/d4.webp" type="image/webp")
+                  img(src="./img/d4.png" alt="img")
               .doctors__name Ольга Крестова
                 span психотерапевт
               .doctors__exp Опыт - 9 года
@@ -266,71 +278,74 @@ block content
     .bg-block-2
       .service-price
         .service-price__inner.site-container
-          .service-price__title.site-title2
-          .service-price__table
-            .service-price__head
-              .service-price__row
-                .service-price__col Услуги по лечению зависимости
-                .service-price__col Стоимость
-            .service-price__body
-              .service-price__row
-                .service-price__col Первичная консультация врача по телефону
-                .service-price__col БЕСПЛАТНО
-              .service-price__row
-                .service-price__col Консультация врача нарколога
-                .service-price__col 2 000 руб.
-              .service-price__row
-                .service-price__col Вызов нарколога на дом
-                .service-price__col 3 000 руб.
-              .service-price__row
-                .service-price__col Мотивация пройти полный курс(метод интервенции)
-                .service-price__col от 5 000 руб.
-              .service-price__row
-                .service-price__col Сопровождение в клинику/реабилитацию
-                .service-price__col от 10 000 руб.
-              .service-price__row
-                .service-price__col Снятие наркотической ломки
-                .service-price__col 4 000 руб.
-              .service-price__row
-                .service-price__col Вывод из запоя
-                .service-price__col от 3 500 руб.
-              .service-price__row
-                .service-price__col Детоксикация организма
-                .service-price__col от 3 500 руб.
-              .service-price__row
-                .service-price__col Ультрабыстрая-опиоидная детоксикация (УБОД)
-                .service-price__col от 18 000 руб.
-              .service-price__row
-                .service-price__col Подшивание от наркотиков
-                .service-price__col от 10 000 руб.
-              .service-price__row
-                .service-price__col Кодирование от алкоголизма
-                .service-price__col от 3 000 руб.
-              .service-price__row
-                .service-price__col Амбулаторное лечение
-                .service-price__col 4 000 руб./сутки
+          .service-price__title.site-title2 ЦЕНЫ НА УСЛУГИ
+          .service-price__tables
+            .service-price__table
+              .service-price__mobile-title Услуги по лечению зависимости
+              .service-price__head
+                .service-price__row
+                  .service-price__col Услуги по лечению зависимости
+                  .service-price__col Стоимость
+              .service-price__body
+                .service-price__row
+                  .service-price__col Первичная консультация врача по телефону
+                  .service-price__col БЕСПЛАТНО
+                .service-price__row
+                  .service-price__col Консультация врача нарколога
+                  .service-price__col 2 000 руб.
+                .service-price__row
+                  .service-price__col Вызов нарколога на дом
+                  .service-price__col 3 000 руб.
+                .service-price__row
+                  .service-price__col Мотивация пройти полный курс(метод интервенции)
+                  .service-price__col от 5 000 руб.
+                .service-price__row
+                  .service-price__col Сопровождение в клинику/реабилитацию
+                  .service-price__col от 10 000 руб.
+                .service-price__row
+                  .service-price__col Снятие наркотической ломки
+                  .service-price__col 4 000 руб.
+                .service-price__row
+                  .service-price__col Вывод из запоя
+                  .service-price__col от 3 500 руб.
+                .service-price__row
+                  .service-price__col Детоксикация организма
+                  .service-price__col от 3 500 руб.
+                .service-price__row
+                  .service-price__col Ультрабыстрая-опиоидная детоксикация (УБОД)
+                  .service-price__col от 18 000 руб.
+                .service-price__row
+                  .service-price__col Подшивание от наркотиков
+                  .service-price__col от 10 000 руб.
+                .service-price__row
+                  .service-price__col Кодирование от алкоголизма
+                  .service-price__col от 3 000 руб.
+                .service-price__row
+                  .service-price__col Амбулаторное лечение
+                  .service-price__col 4 000 руб./сутки
 
-          .service-price__table
-            .service-price__head
-              .service-price__row
-                .service-price__col Услуги по реабилитации зависимых
-                .service-price__col Стоимость
-            .service-price__body
-              .service-price__row
-                .service-price__col Стандарт
-                .service-price__col от 40 000 руб.
-              .service-price__row
-                .service-price__col Высшей категории
-                .service-price__col от 60 000 руб.
-              .service-price__row
-                .service-price__col VIP
-                .service-price__col 100 000 руб.
-              .service-price__row
-                .service-price__col За границей (Тайланд, Испания, Израиль)
-                .service-price__col от 320 000 руб.
-              .service-price__row
-                .service-price__col Постреабилитационная адаптация наркозависимого
-                .service-price__col 30 000 руб.
+            .service-price__table
+              .service-price__mobile-title Услуги по реабилитации зависимых
+              .service-price__head
+                .service-price__row
+                  .service-price__col
+                  .service-price__col Стоимость
+              .service-price__body
+                .service-price__row
+                  .service-price__col Стандарт
+                  .service-price__col от 40 000 руб.
+                .service-price__row
+                  .service-price__col Высшей категории
+                  .service-price__col от 60 000 руб.
+                .service-price__row
+                  .service-price__col VIP
+                  .service-price__col 100 000 руб.
+                .service-price__row
+                  .service-price__col За границей (Тайланд, Испания, Израиль)
+                  .service-price__col от 320 000 руб.
+                .service-price__row
+                  .service-price__col Постреабилитационная адаптация наркозависимого
+                  .service-price__col 30 000 руб.
 
           .service-price__btn
             a(href="#").service-price__btn-i.site-btn2 Бесплатная консультация
