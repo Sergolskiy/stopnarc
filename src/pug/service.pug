@@ -69,7 +69,7 @@ block content
                 li • Успокоительные, седативные, противорвотные + витамины
                 li • Пациенту оставляются препараты
                 li на 2-3 дня (таблетки)
-              a(href="#").programs__btn.site-btn Заказать
+              a(href="#" data-modal-class="callback").programs__btn.site-btn Заказать
             .programs__item
               .programs__i-title
                 span У
@@ -101,7 +101,7 @@ block content
                 li • Комплекс препаратов, которые снижают
                 li токсический вред алкоголя
                 li • Гепатропротекторы
-              a(href="#").programs__btn.site-btn Заказать
+              a(href="#" data-modal-class="callback2").programs__btn.site-btn Заказать
             .programs__item
               .programs__i-title
                 span И
@@ -173,8 +173,9 @@ block content
         .wawe-block__form
           form
             input(type="text" placeholder="Ваше имя")
-            input(type="text" placeholder="Ваш телефон")
-            a(href="#").site-btn3 Отправить
+            input(type="text" placeholder="Ваш телефон").phone
+            a(href="#").site-btn3
+              span Отправить
           .wawe-block__caption *Ваши даные останутся конфиденциальными
 
 
@@ -290,6 +291,7 @@ block content
         .wawe-block__form
           form
             input(type="text" placeholder="Ваше имя")
-            input(type="text" placeholder="Ваш телефон")
-            a(href="#").site-btn3 Отправить
+            input(type="text" placeholder="Ваш телефон").phone
+            a(href="#").site-btn3
+              span Отправить
           .wawe-block__caption *Ваши даные останутся конфиденциальными

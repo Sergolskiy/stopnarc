@@ -49,6 +49,25 @@ $(document).ready(function () {
     src: 'data-blazy' // Default is data-src
   });
 
+  $('form a').click(function (e) {
+    e.preventDefault();
+    $(this).closest('form').find('input').each(function () {
+      if($(this).val().length > 4){
+        $(this).removeClass('check');
+      } else {
+        $(this).addClass('check');
+      }
+
+      if($(this).hasClass('phone')){
+        if($(this).val().indexOf('_') === -1 && $(this).val().length > 0){
+          $(this).removeClass('check');
+        } else {
+          $(this).addClass('check');
+        }
+      }
+    });
+  });
+
 
   $('.header__mobile-menu').click(function () {
     $('.header__menu').toggleClass('open');
